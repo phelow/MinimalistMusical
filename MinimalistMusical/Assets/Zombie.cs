@@ -94,7 +94,7 @@ public class Zombie : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        if(coll.gameObject.tag == "Player")
+        if(coll.gameObject.tag == "Finish")
         {
             GameManager.ms_instance.GameOver();
         }
