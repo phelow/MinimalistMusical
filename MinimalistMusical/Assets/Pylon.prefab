@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23389957990522552}
   - component: {fileID: 58089884545882656}
   - component: {fileID: 114008610664836980}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pylon
   m_TagString: Food
   m_Icon: {fileID: 0}

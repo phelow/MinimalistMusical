@@ -56,7 +56,8 @@ public class GameManager : MonoBehaviour {
         {
             yield return new WaitForEndOfFrame();
         }
-
+        
+        PlayerPrefs.SetFloat("HighScore", m_highScore> m_yourScore ? m_yourScore : m_yourScore);
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 
