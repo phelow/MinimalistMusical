@@ -1,0 +1,196 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 733209648, guid: e0781e12b13132b45bf09c20fcd34d12, type: 3}
+  m_Name: BTEditorWindowState
+  m_EditorClassIdentifier: 
+  Version: 21
+  HolderNodes:
+  - AssetPath: 2e63757272656e746169
+    BehaviorTreeName: 284e6f2041492053656c656374656429
+    BehaviorTreeID: 1
+    LastUpdate: 363336313937323230343237373637353738
+    LastModified: 363336313937323230343337383633323333
+    Errored: 0
+  - AssetPath: 2e637265617465786d6c
+    BehaviorTreeName: 437265617465204e6577204265686176696f722054726565
+    BehaviorTreeID: 0
+    LastUpdate: 30
+    LastModified: 30
+    Errored: 0
+  - AssetPath: 4173736574732f41492f4265686176696f7254726565732f5a6f6d6269652e747874
+    BehaviorTreeName: 5a6f6d626965
+    BehaviorTreeID: 1
+    LastUpdate: 363336313937323230343237373637353738
+    LastModified: 363336313937323230343337383633323333
+    Errored: 0
+  TreeState:
+    _branchRepo:
+    - _fields: []
+      _type: 0
+      _stateIndex: 0
+      _parent: 0
+      _lastUpdate: 30
+      _children: 
+      _variables: 
+      _focused: 0
+    - _fields:
+      - _field: 6e616d65
+        _currentValue: 5a6f6d626965
+        _recordChange: 1
+        _changed: 0
+      - _field: 6f70656e
+        _currentValue: 54727565
+        _recordChange: 0
+        _changed: 0
+      - _field: 726570656174756e74696c
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+      - _field: 6465627567627265616b
+        _currentValue: 46616c7365
+        _recordChange: 1
+        _changed: 0
+      - _field: 7374617274696e677072696f72697479
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+      - _field: 72756e6e696e677072696f72697479
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+      - _field: 7072696f72697479
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+      - _field: 776569676874
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+      _type: 4
+      _stateIndex: 1
+      _parent: 0
+      _lastUpdate: 363336313937323230343237373637353738
+      _children: 02000000
+      _variables: 
+      _focused: 0
+    - _fields:
+      - _field: 6e616d65
+        _currentValue: 726f6f74
+        _recordChange: 1
+        _changed: 0
+      - _field: 6f70656e
+        _currentValue: 54727565
+        _recordChange: 0
+        _changed: 0
+      - _field: 726570656174756e74696c
+        _currentValue: 73756363657373
+        _recordChange: 1
+        _changed: 0
+      - _field: 6465627567627265616b
+        _currentValue: 46616c7365
+        _recordChange: 1
+        _changed: 0
+      - _field: 7374617274696e677072696f72697479
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+      - _field: 72756e6e696e677072696f72697479
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+      - _field: 7072696f72697479
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+      - _field: 776569676874
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+      - _field: 7573657072696f726974696573
+        _currentValue: 46616c7365
+        _recordChange: 1
+        _changed: 0
+      _type: 20
+      _stateIndex: 2
+      _parent: 1
+      _lastUpdate: 363336313937323139393030373638393738
+      _children: 04000000
+      _variables: 
+      _focused: 0
+    - _fields: []
+      _type: 0
+      _stateIndex: 0
+      _parent: 0
+      _lastUpdate: 30
+      _children: 
+      _variables: 
+      _focused: 0
+    - _fields:
+      - _field: 6e616d65
+        _currentValue: 6d6f7665
+        _recordChange: 1
+        _changed: 0
+      - _field: 726570656174756e74696c
+        _currentValue: 72756e6e696e67
+        _recordChange: 1
+        _changed: 0
+      - _field: 6465627567627265616b
+        _currentValue: 46616c7365
+        _recordChange: 1
+        _changed: 0
+      - _field: 7374617274696e677072696f72697479
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+      - _field: 72756e6e696e677072696f72697479
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+      - _field: 7072696f72697479
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+      - _field: 776569676874
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+      - _field: 6d6f7665746172676574
+        _currentValue: 4e617669676174696f6e20546172676574
+        _recordChange: 1
+        _changed: 0
+      - _field: 6d6f76657370656564
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+      - _field: 66616365746172676574
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+      - _field: 7475726e7370656564
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+      - _field: 636c6f7365656e6f75676864697374616e6365
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+      - _field: 636c6f7365656e6f756768616e676c65
+        _currentValue: 
+        _recordChange: 1
+        _changed: 0
+      _type: 15
+      _stateIndex: 4
+      _parent: 2
+      _lastUpdate: 363336313937323230343237373637353738
+      _children: 
+      _variables: 
+      _focused: 1
+    _freeList: 03000000

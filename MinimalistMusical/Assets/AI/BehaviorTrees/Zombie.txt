@@ -1,0 +1,1 @@
+<behaviortree version="1.1" repeatuntil="" name="Zombie" debugbreak="False"><sequencer usepriorities="False" repeatuntil="success" name="root" debugbreak="False"><move turnspeed="" repeatuntil="running" priority="" name="move" movetarget="Navigation Target" movespeed="" facetarget="" debugbreak="False" closeenoughdistance="" closeenoughangle=""></move></sequencer></behaviortree>

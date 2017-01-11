@@ -2,20 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Orb : MonoBehaviour {
+public class GameManager : MonoBehaviour {
+    public static GameManager ms_instance;
 
 	// Use this for initialization
 	void Start () {
-		
+        ms_instance = this;
 	}
 	
+    public void GameOver()
+    {
+
+    }
+
 	// Update is called once per frame
 	void Update () {
 		
 	}
-
-    public void SetPosition(Vector3 position)
-    {
-        transform.position = position;
-    }
 }
