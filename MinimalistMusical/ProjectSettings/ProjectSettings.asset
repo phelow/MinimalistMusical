@@ -453,6 +453,7 @@ PlayerSettings:
   XboxOnePersistentLocalStorageSize: 0
   vrEditorSettings: {}
   cloudServicesEnabled:
+    Build: 1
     UNet: 1
   cloudProjectId: d8b19dc6-40f2-4747-9627-b29a47220a37
   projectName: MinimalistMusical
