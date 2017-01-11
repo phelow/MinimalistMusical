@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Pylon
+  - Food
   layers:
   - Default
   - TransparentFX
