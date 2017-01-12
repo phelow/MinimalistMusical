@@ -18,7 +18,7 @@ public class Zombie : MonoBehaviour
 
     private const float m_searchRadius = 5.0f;
 
-    private const float m_movementForce = 300.0f;
+    private float m_movementForce = 1000.0f;
 
     private int m_originalLife;
     private int m_life;
@@ -31,6 +31,7 @@ public class Zombie : MonoBehaviour
 
     public void SetLife(int life)
     {
+        m_movementForce += life;
         m_originalLife = life;
         m_life = life;
     }

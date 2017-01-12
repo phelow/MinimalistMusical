@@ -30,14 +30,14 @@ public class PylonManager : MonoBehaviour
     public Pylon FindClosestPylon(SnakeHead head)
     {
         Pylon best = null;
-        foreach(Pylon pylon in m_pylons)
+        foreach (Pylon pylon in m_pylons)
         {
-            if(best == null)
+            if (best == null)
             {
                 best = pylon;
             }
 
-            if(Vector2.Distance(best.transform.position,head.transform.position) > Vector2.Distance(pylon.transform.position, head.transform.position))
+            if (Vector2.Distance(best.transform.position, head.transform.position) > Vector2.Distance(pylon.transform.position, head.transform.position))
             {
                 best = pylon;
             }
@@ -52,18 +52,10 @@ public class PylonManager : MonoBehaviour
         {
             Vector2 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(mouseWorldPos, Vector2.zero);
-            if (hit != null && hit.collider != null)
-            {
-                if(hit.collider.gameObject.tag == "Pylon")
-                {
-                    RemovePylon(hit.collider.gameObject.GetComponent<Pylon>());
-                }
-            }
-            else
-            {
 
-                m_pylons.Add(GameObject.Instantiate(mp_pylon, new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y), transform.rotation, null).GetComponent<Pylon>());
-            }
+
+            m_pylons.Add(GameObject.Instantiate(mp_pylon, new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y), transform.rotation, null).GetComponent<Pylon>());
+
         }
     }
 

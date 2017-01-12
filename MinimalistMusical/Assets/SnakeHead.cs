@@ -7,7 +7,7 @@ public class SnakeHead : Segment
     [SerializeField]
     private Rigidbody2D m_headRigidbody;
 
-    private float m_force = 1000.0f;
+    private float m_force = 2000.0f;
     private int m_segments = 1;
     private Segment m_lastSegment;
 

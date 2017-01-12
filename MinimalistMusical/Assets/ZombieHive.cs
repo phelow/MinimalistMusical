@@ -16,9 +16,12 @@ public class ZombieHive : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         ms_instance = this;
-        StartCoroutine(SpawnZombies());
 	}
 
+    public void Activate()
+    {
+        StartCoroutine(SpawnZombies());
+    }
 
     void SpawnZombie()
     {

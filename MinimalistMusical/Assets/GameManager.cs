@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        m_yourScore = 0;
         ms_instance = this;
         points = GainPoints();
         StartCoroutine(points);
@@ -31,6 +32,13 @@ public class GameManager : MonoBehaviour {
 
     private IEnumerator GainPoints()
     {
+        while (!Input.GetMouseButton(0))
+        {
+            yield return new WaitForEndOfFrame();
+        }
+
+        ZombieHive.ms_instance.Activate();
+
         while (true)
         {
             yield return new WaitForSeconds(1.0f);
@@ -56,8 +64,12 @@ public class GameManager : MonoBehaviour {
         {
             yield return new WaitForEndOfFrame();
         }
-        
-        PlayerPrefs.SetFloat("HighScore", m_highScore> m_yourScore ? m_yourScore : m_yourScore);
+
+        if (m_yourScore > m_highScore)
+        {
+            PlayerPrefs.SetInt("HighScore", m_yourScore);
+        }
+
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 
