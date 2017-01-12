@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour {
 
     private IEnumerator GainPoints()
     {
-        while (!Input.GetMouseButton(0))
+        while (!Input.GetMouseButton(0) && Input.touchCount ==  0)
         {
             yield return new WaitForEndOfFrame();
         }
@@ -60,7 +60,8 @@ public class GameManager : MonoBehaviour {
         m_bottom.text = "YOUR SCORE:" + m_yourScore;
         yield return new WaitForSeconds(1.0f);
         m_score.text = "Click to play again";
-        while (!Input.GetMouseButton(0))
+
+        while (!Input.GetMouseButton(0) && Input.touchCount == 0)
         {
             yield return new WaitForEndOfFrame();
         }

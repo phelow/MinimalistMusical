@@ -11,13 +11,13 @@ public class CheatCodes : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKey(KeyCode.Space))
-        {
-            Time.timeScale = 20.0f;
-        }
-        else
-        {
-            Time.timeScale = 1.0f;
-        }
+        //if (Input.GetKey(KeyCode.Space))
+        //{
+        //    Time.timeScale = 20.0f;
+        //}
+        //else
+        //{
+        //    Time.timeScale = 1.0f;
+        //}
 	}
 }
