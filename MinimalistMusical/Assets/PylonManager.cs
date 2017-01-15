@@ -51,12 +51,14 @@ public class PylonManager : MonoBehaviour
 
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
         {
-            
+
+            SoundManager.ms_instance.PlaySoundAt(Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position));
             m_pylons.Add(GameObject.Instantiate(mp_pylon, new Vector2(Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position).x, Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position).y), transform.rotation, null).GetComponent<Pylon>());
         }
 
         if (Input.GetMouseButtonDown(0))
         {
+            SoundManager.ms_instance.PlaySoundAt(Camera.main.ScreenToWorldPoint(Input.mousePosition));
             m_pylons.Add(GameObject.Instantiate(mp_pylon, new Vector2(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y), transform.rotation, null).GetComponent<Pylon>());
 
         }

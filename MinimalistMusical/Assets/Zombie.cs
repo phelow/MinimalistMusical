@@ -9,6 +9,9 @@ public class Zombie : MonoBehaviour
     private Rigidbody2D m_rigidbody;
 
     [SerializeField]
+    private SpriteRenderer m_spriteRenderer;
+
+    [SerializeField]
     private GameObject mp_marker;
 
     [SerializeField]
@@ -18,7 +21,7 @@ public class Zombie : MonoBehaviour
 
     private const float m_searchRadius = 5.0f;
 
-    private float m_movementForce = 1000.0f;
+    private float m_movementForce = 100.0f;
 
     private int m_originalLife;
     private int m_life;
@@ -31,7 +34,7 @@ public class Zombie : MonoBehaviour
 
     public void SetLife(int life)
     {
-        m_movementForce += life;
+        m_movementForce += life * 3;
         m_originalLife = life;
         m_life = life;
     }
@@ -78,11 +81,20 @@ public class Zombie : MonoBehaviour
 
         if (best == null || Random.Range(0, 100) < 10)
         {
-            m_rigidbody.AddForce(new Vector2(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f)).normalized * m_movementForce);
+            float x = Random.Range(-1.0f, 1.0f);
+            float y = Random.Range(-1.0f, 1.0f);
+            m_rigidbody.AddForce(new Vector2(x,y).normalized * m_movementForce);
+            float angle = (Mathf.Atan2(y, x) * Mathf.Rad2Deg);
+
+            transform.eulerAngles = new Vector3(0, 0, 270 + angle);
         }
         else
         {
             m_rigidbody.AddForce((best.transform.position - this.transform.position).normalized * m_movementForce);
+
+            float angle = (Mathf.Atan2(best.transform.position.y - transform.position.y, best.transform.position.x - transform.position.x) * Mathf.Rad2Deg);
+
+            transform.eulerAngles = new Vector3(0, 0, 270 + angle);
         }
 
         m_life--;
@@ -97,14 +109,35 @@ public class Zombie : MonoBehaviour
     {
         if(coll.gameObject.tag == "Finish")
         {
+            for(int i = 0; i< 100; i++)
+            {
+                SoundManager.ms_instance.PlaySoundAt(transform.position);
+            }
+
             GameManager.ms_instance.GameOver();
+            StartCoroutine(DieRoutine());
         }
+    }
+
+    private IEnumerator DieRoutine()
+    {
+        float t = 0.0f;
+        SoundManager.ms_instance.PlaySoundAt(transform.position);
+        while (t < 1.0f)
+        {
+            t += Time.deltaTime;
+            m_spriteRenderer.color = Color.Lerp(Color.white, Color.clear, t);
+            yield return new WaitForEndOfFrame();
+        }
+
+
+        ZombieHive.ms_instance.KillZombie();
+        Destroy(this.gameObject);
     }
 
     private void Die()
     {
-        ZombieHive.ms_instance.KillZombie();
-        Destroy(this.gameObject);
+        StartCoroutine(DieRoutine());
     }
 
     private IEnumerator MoveEverySecond() //replace with audio integration

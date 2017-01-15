@@ -41,6 +41,9 @@ public class SnakeHead : Segment
         //Move the head towards it
         m_headRigidbody.AddForce((m_segments * .9f) * m_force * (target.transform.position - transform.position).normalized);
 
+        float angle = (Mathf.Atan2(target.transform.position.y - transform.position.y, target.transform.position.x - transform.position.x) * Mathf.Rad2Deg);
+
+        transform.eulerAngles = new Vector3(0, 0, 270 + angle);
     }
 
 
@@ -48,6 +51,7 @@ public class SnakeHead : Segment
     {
         if(coll.gameObject.tag == "Food")
         {
+            SoundManager.ms_instance.PlaySoundAt(transform.position);
             PylonManager.ms_instance.RemovePylon(coll.gameObject.GetComponent<Pylon>());
 
             GameObject newSegment = GameObject.Instantiate(mp_segment, m_lastSegment.transform.position, m_lastSegment.transform.rotation, null);

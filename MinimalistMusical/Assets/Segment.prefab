@@ -19,13 +19,13 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4170899873788816}
-  - component: {fileID: 33737218514076370}
-  - component: {fileID: 23194833930214884}
   - component: {fileID: 58710497614582846}
   - component: {fileID: 114878192399478620}
   - component: {fileID: 50894404126174694}
   - component: {fileID: 231994101984439164}
-  m_Layer: 0
+  - component: {fileID: 33844417972687524}
+  - component: {fileID: 23156248343350700}
+  m_Layer: 12
   m_Name: Segment
   m_TagString: Pylon
   m_Icon: {fileID: 0}
@@ -39,13 +39,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1489819259910562}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.0375834, y: 14.851032, z: -14.141487}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 2, y: 6, z: 0}
+  m_LocalScale: {x: 3.6, y: 3.5999997, z: 3.5999997}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23194833930214884
+--- !u!23 &23156248343350700
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -76,7 +76,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &33737218514076370
+--- !u!33 &33844417972687524
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -93,7 +93,7 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 1
+  m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 1
   m_AngularDrag: 0.05
@@ -140,10 +140,10 @@ SpringJoint2D:
   m_ConnectedRigidBody: {fileID: 0}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: -1}
   m_AutoConfigureDistance: 0
-  m_Distance: 2.5
-  m_DampingRatio: 1
+  m_Distance: 0.005
+  m_DampingRatio: 0
   m_Frequency: 1
